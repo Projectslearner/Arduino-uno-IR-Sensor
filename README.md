@@ -17,7 +17,7 @@ This project demonstrates how to use an IR infrared sensor module with an Arduin
 #### Circuit Setup
 
 1. **Connect the IR Infrared Sensor Module to Arduino Uno:**
-   - **Signal pin of the IR Infrared Sensor Module:** Connect to analog pin A0 on the Arduino Uno.
+   - **Signal pin of the IR Infrared Sensor Module:** Connect to digital pin 7 on the Arduino Uno.
    - **Vcc pin of the IR Infrared Sensor Module:** Connect to 5V on the Arduino Uno.
    - **GND pin of the IR Infrared Sensor Module:** Connect to GND on the Arduino Uno.
 
@@ -34,6 +34,11 @@ This project demonstrates how to use an IR infrared sensor module with an Arduin
    - Upload the code to the Arduino Uno.
    - Open the serial monitor with a baud rate of 9600.
    - Place objects within the sensor's range. Observe the serial monitor to see the sensor values and object detection status.
+### Explanation:
+   - pinMode(irSensorPin, INPUT): Sets the IR sensor pin as an input.
+   - digitalRead(irSensorPin): Reads the digital value from the IR sensor pin.
+   - Serial.println(): Prints the status of object detection to the Serial Monitor.
+   - delay(500): Adds a delay of 500 milliseconds between each reading to make the output more readable.
 
 #### Applications
 
